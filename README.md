@@ -22,7 +22,7 @@ export class Foo{
 In Node.js
 
 ```javascript
-const { include } = require('include.js');
+const { include } = require('include');
 include('class.js');
 
 const foo = new Foo();
@@ -32,7 +32,7 @@ The script supports the import statement from within the ES6 class, at the momen
 Sample anotherclass.js
 
 ```javascript
-import BrowserWindow from Electron.js;
+import BrowserWindow from Electron;
 
 export class Bar{
     constructor(){
