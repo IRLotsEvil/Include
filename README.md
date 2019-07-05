@@ -4,7 +4,7 @@ Include is a script that allows the importing of ES6 Classes into Node.js
 
 ## Usage
 
-Sample class.js
+Sample *class.js*
 
 ```javascript
 export class Foo{
@@ -29,7 +29,7 @@ const foo = new Foo();
 ```
 The script supports the import statement from within the ES6 class
 
-Sample anotherclass.js
+Sample *anotherclass.js*
 
 ```javascript
 import BrowserWindow from "electron";
