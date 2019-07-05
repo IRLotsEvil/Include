@@ -32,9 +32,9 @@ The script supports the import statement from within the ES6 class
 Sample *anotherclass.js*
 
 ```javascript
-import BrowserWindow from "electron";
+import { BrowserWindow } from "electron";
 
-import BrowserWindow from "./class";
+import { Foo } from "./class";
 
 export class Bar{
     constructor(){
