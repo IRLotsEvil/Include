@@ -1,5 +1,5 @@
 module.exports = exports = (function(){
-    return function(file,pushTo=null){
+    return function _include(file,pushTo=null){
         if(pushTo === null)pushTo = global;
         var stuff = require('fs').readFileSync(file);
         if(stuff.length>0){
@@ -10,7 +10,13 @@ module.exports = exports = (function(){
             })(str).forEach(i=>{
                 var aliases = i[1].split(",").map(x=>x.replace(/\s/g,""));
                 if(i[0] === "{"){
-                    var _tmpLoad = require(i[2]);
+                    var _tmpLoad = (function(f){
+                        try{
+                            require.resolve(f);
+                            return require(f);
+                        }catch{ 
+                            return _include(f.includes(".js")?f:f+".js",pushTo);
+                        }})(i[2]);
                     aliases.forEach(x=>{
                         if(!Reflect.has(pushTo,x) && Reflect.has(_tmpLoad,x)) 
                             pushTo[x] = _tmpLoad[x]; 
