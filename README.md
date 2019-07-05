@@ -27,16 +27,19 @@ include('class.js');
 
 const foo = new Foo();
 ```
-The script supports the import statement from within the ES6 class, at the moment it only supports modules.
+The script supports the import statement from within the ES6 class
 
 Sample anotherclass.js
 
 ```javascript
-import BrowserWindow from Electron;
+import BrowserWindow from "electron";
+
+import BrowserWindow from "./class";
 
 export class Bar{
     constructor(){
         this.window = new BrowserWindow();
+        this.foo = new Foo();
     }
 }
 ```
