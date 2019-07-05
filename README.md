@@ -1,6 +1,6 @@
 # Include
 
-Include is a script that allows the importing of ES6 Classes into Node.js
+Include is a script that allows the importing of ES6 Classes into Node.js, I made this module for convenience and make it easier to break up classes
 
 ## Usage
 
