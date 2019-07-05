@@ -11,10 +11,10 @@ export class Foo{
     constuctor(){
         this.property = ""
     }
-    get gettersSetters(){
+    aFunction(){
         return this.property;
     }
-    set gettersSetters(value){
+    static aStaticFunction(value){
         this.property = value;
     }
 }
