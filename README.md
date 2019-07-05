@@ -15,7 +15,7 @@ export class Foo{
         return this.property;
     }
     static aStaticFunction(value){
-        this.property = value;
+        console.log(value);
     }
 }
 ```
